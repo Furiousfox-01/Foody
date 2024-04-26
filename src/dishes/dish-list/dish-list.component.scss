@@ -1,0 +1,17 @@
+.parentList {
+  margin: 3.7rem 0 3rem 4.6rem;
+
+  h2 {
+    font-weight: 500;
+  }
+  .slider {
+    margin-top: 3em;
+    overflow-x: auto;
+    margin: 2rem 0 0 0.9rem;
+    display: flex;
+    gap: 20px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    
+  }
+}

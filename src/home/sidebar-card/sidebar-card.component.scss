@@ -1,0 +1,31 @@
+.card {
+  border: 1px solid grey;
+  padding: 1rem;
+  .data {
+    display: flex;
+    justify-content: space-between;
+    img{
+        cursor: pointer;
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 95%;
+      padding-left: 4rem;
+     
+      div {
+        cursor: pointer;
+      }
+      p{
+        margin-bottom: 0;
+      }
+    }
+  }
+}

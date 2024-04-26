@@ -1,0 +1,14 @@
+<div class="main">
+  <div class="left">
+    <h1>FOOD:y</h1>
+    <h3>Bringing the flavor game to a whole new level.</h3>
+  </div>
+  <div class="right" [ngClass]="{'rotate':rotate}">
+    <div class="over">
+      <app-login-num (rotate)="rotate = $event"></app-login-num>
+    </div>
+    <app-login-otp [isDisplay]="visible"></app-login-otp>
+  </div>
+</div>
+
+

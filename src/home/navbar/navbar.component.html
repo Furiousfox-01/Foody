@@ -1,0 +1,14 @@
+<div class="navbar" [ngClass]="{ scrolled: isShadow }">
+  <p class="nav-brand">{{ title }}</p>
+  <div class="nav-btn" id="nav-btn" (click)="Open()">
+    <img
+      width="28"
+      height="28"
+      src="https://img.icons8.com/fluency-systems-regular/48/shopping-bag--v1.png"
+      alt="shopping-bag--v1"
+    />
+  </div>
+  <div class="sidebar" id="sidebar" [ngClass]="{ open: isOpen }">
+    <app-sidebar (clicked)="Open()"></app-sidebar>
+  </div>
+</div>

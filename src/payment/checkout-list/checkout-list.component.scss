@@ -1,0 +1,43 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  border: 1px solid black;
+  margin-top:1rem;
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    padding: 2rem 2rem 1rem 2rem;
+    .descrip {
+      h3 {
+        font-weight: 350;
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.486);
+      }
+      div >span{
+        cursor: pointer;
+      }
+    }
+    .cross {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+
+      p {
+        font-size: 2rem;
+        font-weight: 500;margin-bottom: 0;
+
+      }
+      img{
+        cursor: pointer;
+      }
+    }
+  }
+}

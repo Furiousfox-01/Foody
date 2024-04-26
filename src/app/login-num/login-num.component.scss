@@ -1,0 +1,35 @@
+form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+
+  input[type="number"] {
+    padding: 1rem 0;
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+  }
+  label {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  div {
+    margin: 0.3rem 0 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    input[type="checkbox"] {
+      margin: 0.3rem 1rem 0 0;
+    }
+    label {
+      margin-top: 0;
+      font-size: 11px;
+      font-weight: 400;
+      text-align: justify;
+    }
+  }
+}
+
+.formNone {
+  display: none;
+}

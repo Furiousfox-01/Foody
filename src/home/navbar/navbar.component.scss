@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 2rem;
+  border: 1px dashed lightgrey;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  .nav-brand {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .nav-btn {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.288);
+    }
+  }
+  .sidebar {
+    padding: 0 .7rem 0 0;
+    position: fixed;
+    border: 1px dashed grey;
+    top: 0;
+    right: 0;
+    width: 390px;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 100;
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+.scrolled{
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#nav-btn.open {
+  border: 2px solid black;
+}
