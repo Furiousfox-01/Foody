@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4rem 2rem;
-  border: 1px dashed lightgrey;
+  // padding: 0.4rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.35);
   position: sticky;
   top: 0;
   background-color: white;
@@ -27,7 +27,7 @@
     }
   }
   .sidebar {
-    padding: 0 .7rem 0 0;
+    padding: 0 0.7rem 0 0;
     position: fixed;
     border: 1px dashed grey;
     top: 0;
@@ -43,7 +43,7 @@
     }
   }
 }
-.scrolled{
+.scrolled {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 #nav-btn.open {

@@ -1,7 +1,8 @@
-<div class="cardContainer" (click)="openPopup()">
-  <img src="../../assets/banana-leaf rice.png" alt="" width="340px" />
+<div class="cardContainer" (click)="openPopup()" *ngIf="food">
+  <img [src]="'data:image/png;base64,' + food.image"  alt="" width="340px" height="200px"/>
   <div class="name-count">
-    <p>Sambar Rice</p>
+    <!-- <p>Sambar Rice</p> -->
+    <p>{{food.name}}</p>
     <div class="count">
       <img src="../../assets/spoon.png" alt="" width="17px" height="17px" />
       <p>{{ count }}</p>
@@ -28,6 +29,7 @@
 
   <div class="card-body">
     <h2 class="card-text">Sambar Rice</h2>
+    
 
     <div class="card-body">
       <div style="display: flex" class="card-text">

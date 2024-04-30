@@ -9,4 +9,5 @@ export class HomeComponent {
   shadowOn() {
     this.isShadow = !this.isShadow;
   }
+
 }

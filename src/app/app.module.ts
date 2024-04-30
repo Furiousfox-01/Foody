@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ButtonComponent } from './button/button.component';
 import { LoginOtpComponent } from './login-otp/login-otp.component';
 import { LoginNumComponent } from './login-num/login-num.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeModule } from '../home/home.module';
 import { DishesModule } from '../dishes/dishes.module';
@@ -26,7 +26,8 @@ import { PaymentModule } from '../payment/payment.module';
     FormsModule,
     HomeModule,
     DishesModule,
-    PaymentModule
+    PaymentModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Food } from '../../app/services/food-interface';
 @Component({
   selector: 'app-food-card',
   templateUrl: './food-card.component.html',
@@ -9,7 +10,11 @@ import { Router } from '@angular/router';
 export class FoodCardComponent {
 cost:number= 40;
 count:number= 0;
-constructor(private router:Router){}
+@Input() food:Food | undefined;
+constructor(private router:Router){
+  
+}
+
 isPopupOpen = false;
 isShow = false
 openPopup(): void {

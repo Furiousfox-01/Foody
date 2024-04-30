@@ -1,28 +1,35 @@
-<form action="" [ngClass]="{'formNone':isDisplay}">
-  
-    <label for="login">LOGIN</label>
-    <input type="number" name="phone-no" id="phone-no" />
+<form action="" [ngClass]="{ formNone: isDisplay }">
+  <label for="login">LOGIN</label>
+  <input
+    type="number"
+    name="phone-no"
+    id="phone-no"
+    placeholder="Enter your Phone Number"
+  />
 
-    <label for="Terms-head" style="margin-top: 1rem; font-size: 13px"
-      >TERMS AND CONDITIONS</label
-    >
-    <div>
-      <input
+  <label for="Terms-head" style="margin-top: 1rem; font-size: 13px"
+    >TERMS AND CONDITIONS</label
+  >
+  <div>
+    <input
       [(ngModel)]="isChecked"
-      [ngModelOptions]="{standalone: true}"
-        type="checkbox"
-        name="phone-no"
-        id="phone-no"
-      />
-      <label class="Terms-text"
-        >By using our app, you agree to order food for personal consumption
-        only. Orders are subject to availability and payment upon ordering.
-        Delivery times are estimates. Cancellations are permitted before food
-        preparation. We are not liable for delays or damages. Misuse of the
-        app is prohibited. Terms may change, and continued use implies
-        acceptance. Contact us at [Your Contact Information] for
-        queries.</label
-      >
-    </div>
-    <app-button [value]="buttontext" [visible]="isChecked" (action)="handleButtonAction($event)" ></app-button>
-  </form>
+      [ngModelOptions]="{ standalone: true }"
+      type="checkbox"
+      name="phone-no"
+      id="phone-no"
+    />
+    <label class="Terms-text"
+      >By using our app, you agree to order food for personal consumption only.
+      Orders are subject to availability and payment upon ordering. Delivery
+      times are estimates. Cancellations are permitted before food preparation.
+      We are not liable for delays or damages. Misuse of the app is prohibited.
+      Terms may change, and continued use implies acceptance. Contact us at
+      [Your Contact Information] for queries.</label
+    >
+  </div>
+  <app-button
+    [value]="buttontext"
+    [visible]="isChecked"
+    (action)="handleButtonAction($event)"
+  ></app-button>
+</form>
