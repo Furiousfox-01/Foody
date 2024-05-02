@@ -17,7 +17,8 @@ export class LoginOtpComponent {
   countdown$: Observable<number> | undefined;
   constructor(private router:Router) {}
 
-  navi(actionInfo: { actionType: string; source: string }) {
+  
+  navi(actionInfo: { source: string }) {
     if (actionInfo.source === 'ENTER') {
       console.log("navigate")
   this.router.navigate(['home']);

@@ -3,7 +3,10 @@ form {
   display: flex;
   flex-direction: column;
   margin-right: 2rem;
-
+  .Terms-head {
+    margin-top: 1rem;
+    font-size: 13px;
+  }
   input[type="number"] {
     padding: 1rem 0;
     text-align: center;
