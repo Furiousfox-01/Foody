@@ -1,28 +1,32 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HomeComponent } from '../home/home.component';
-import { LoginComponent } from './login/login.component';
-import { DishesComponent } from '../dishes/dishes.component';
-import { CheckoutComponent } from '../payment/checkout/checkout.component';
+
 
 const routes: Routes = [
   {
-    path: '',
-    component: LoginComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
+    path: 'checkout',
+    loadChildren: () => import('../modules/checkout/checkout.module').then((m) => m.CheckoutModule),
   },
   {
     path: 'dish',
-    component: DishesComponent,
+    loadChildren: () =>
+      import('../modules/dish/dish.module').then((m) => m.TestModule),
   },
   {
-    path: 'checkout',
-    component: CheckoutComponent,
-  }
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('../modules/login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('../modules/home/home.module').then((m) => m.HomeModule),
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

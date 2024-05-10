@@ -1,0 +1,10 @@
+.contain {
+  .categoryItems {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}

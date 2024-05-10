@@ -1,0 +1,20 @@
+<div class="bcardCont" *ngIf="title != ''">
+  <div class="bcardContsection">
+    <div>
+      <h1 class="title">
+        {{ title }}
+      </h1>
+      <p>{{ para }}</p>
+    </div>
+    <div class="para-btn">
+      <app-button
+        [value]="buttonText"
+        [visible]="true"
+        (action)="naviToDish()"
+      ></app-button>
+    </div>
+  </div>
+  <div class="img-section">
+    <img src="{{ imgSrc }}" alt="" />
+  </div>
+</div>

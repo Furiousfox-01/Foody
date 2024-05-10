@@ -1,0 +1,36 @@
+.btn {
+  width: 100%;
+  min-width: 300px;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  margin: 0 auto;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: grey;
+}
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+.btn-primary:hover {
+  color: rgb(178, 176, 176);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  min-width: fit-content;
+  width: auto;
+  padding-right: 1rem;
+}
+
+.btn-secondary:hover, .active {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+

@@ -1,0 +1,17 @@
+<div class="contain">
+  <navbar></navbar>
+  <!-- <div class="bigText">
+    <img src="../../assets/india.png" alt="" loading="lazy" height="450" />
+  </div> -->
+  <div class="categoryItems">
+    <app-button
+      *ngFor="let data of category"
+      [value]="data"
+      [visible]="true"
+      [btnType]="btnType"
+    ></app-button>
+  </div>
+  <dish-list></dish-list>
+  <dish-list></dish-list>
+  <dish-list></dish-list>
+</div>

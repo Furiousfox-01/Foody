@@ -1,0 +1,38 @@
+.bcardCont {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 4rem 1rem 1rem;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+  &section {
+    margin-left: 1.5rem;
+    min-width: 40%;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      font-weight: 500;
+    }
+    .para-btn {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .img-section {
+    img {
+      max-width: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

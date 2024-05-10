@@ -1,0 +1,22 @@
+<form action="" [ngClass]="{ formNone: loginNumData.isDisplay }">
+  <label for="login">LOGIN</label>
+  <input
+    type="number"
+    name="phone-no"
+    id="phone-no"
+    placeholder="Enter your Phone Number"
+  />
+
+  <label for="Terms-head">TERMS AND CONDITIONS</label>
+  <div>
+    <input
+      [(ngModel)]="loginNumData.isChecked"
+      [ngModelOptions]="{ standalone: true }"
+      type="checkbox"
+      name="phone-no"
+      id="phone-no"
+    />
+    <label class="Terms-text">{{ loginNumData.termsCondition }}</label>
+  </div>
+  <app-button [value]="loginNumData.buttonText" [visible]="loginNumData.isChecked"></app-button>
+</form>
