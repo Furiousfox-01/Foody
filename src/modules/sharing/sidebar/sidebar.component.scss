@@ -1,25 +1,23 @@
-.titl{
-    display: flex;
-    margin:1rem 0 0 0;
-    font-weight: 400;
-    justify-content: space-between;
-    padding: .8rem;
-    font-size: 1.4rem;
-    font-weight: 300;
-    img{
-        cursor: pointer;
-    }
+.title {
+  display: flex;
+  margin: 1rem 0 0 0;
+  font-weight: 400;
+  justify-content: space-between;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  img {
+    cursor: pointer;
+  }
 }
 .slider {
-    margin-top: 3em;
-    overflow-y: auto;
-    height: 80vh;
-    margin: 2rem 0 0 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;
-    
-  }
-
+  margin-top: 3em;
+  overflow-y: auto;
+  height: 80vh;
+  margin: 2rem 0 0 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

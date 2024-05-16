@@ -1,55 +1,53 @@
 <div class="cardContainer" (click)="openPopup()" *ngIf="food">
-  <img
-    [src]="'data:image/png;base64,' + food.image"
-    alt=""
-    width="340px"
-    height="200px"
-  />
+  <img src="{{ food.image }}" alt="" width="340px" height="200px" />
   <div class="name-count">
     <p>{{ food.name }}</p>
-    <div class="count">
-      <img src="../../assets/spoon.png" alt="" width="17px" height="17px" />
-      <p>{{ count }}</p>
-    </div>
   </div>
   <div class="rating">
-    <p class="star">stars</p>
-    <p>(231) 5.0 rating</p>
+    <p class="star">
+      {{ food.rating }}
+    </p>
+    <img src="../../../assets/star.png" alt="" width="14" height="14" />
+    <p>({{ food.totalRatings }})</p>
   </div>
 </div>
 
 <div
-  class="card"
-  class="popup-content"
+  class="popup-container"
   *ngIf="isPopupOpen"
   [ngClass]="{ show: isShow }"
+  (click)="closePopup()"
 >
-  <img
-    class="card-img-top"
-    src="../../assets/banana-leaf rice.png"
-    alt="Card image cap"
-    style="width: 50%"
-  />
+  <div class="card" class="popup-content" (click)="stopPropagation($event)">
+    <img class="card-img-top" src="{{ food.image }}" alt="Card image cap" />
 
-  <div class="card-body">
-    <h2 class="card-text">Sambar Rice</h2>
+    <div class="cardBody">
+      <h2 class="card-text cardText">{{ food.name }}</h2>
+      <p style="font-size: 12px" class="card-text cardText">
+        {{ food.description }}
+      </p>
+      <p>{{ food.price | currency : "INR" }}</p>
 
-    <div class="card-body">
-      <div style="display: flex" class="card-text">
-        <p class="star">stars</p>
-        <p>(231) 5.0 rating</p>
+      <div class="cardBody">
+        <div style="display: flex" class="card-text">
+          <p class="star">{{ food.rating }} stars</p>
+          <p>({{ food.totalRatings }})</p>
+        </div>
+        <div class="flexActive marginTop">
+          <button class="btn btn-sm" (click)="minusCount()">---</button>
+          {{ count }}
+          <button class="btn btn-sm" (click)="plusCount()">+</button>
+        </div>
       </div>
-      <div class="flexActive">
-        <button class="btn btn-sm">---</button> {{ count }}
-        <button class="btn btn-sm">+</button>
+      <div class="flexActive marginTop">
+        <button (click)="addToBag()" class="btn">Add to Bag</button>
+        <button (click)="navigateTocheckout()" class="btn btn-dark">
+          Order Now
+        </button>
       </div>
     </div>
-    <div style="display: flex; justify-content: space-between">
-      <button (click)="addToBag()" class="btn">Add to Bag</button>
-      <button (click)="closePopup()" class="btn btn-dark">Order Now</button>
+    <div class="card-body close">
+      <button class="btn close-btn" (click)="closePopup()">&times;</button>
     </div>
-  </div>
-  <div class="card-body">
-    <button class="btn close-btn" (click)="closePopup()">&times;</button>
   </div>
 </div>

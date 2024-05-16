@@ -1,10 +1,11 @@
 <form action="" [ngClass]="{ formNone: loginNumData.isDisplay }">
   <label for="login">LOGIN</label>
   <input
-    type="number"
+    type="text"
     name="phone-no"
     id="phone-no"
-    placeholder="Enter your Phone Number"
+    placeholder="Enter your Mail"
+    [(ngModel)]="Email"
   />
 
   <label for="Terms-head">TERMS AND CONDITIONS</label>
@@ -18,5 +19,5 @@
     />
     <label class="Terms-text">{{ loginNumData.termsCondition }}</label>
   </div>
-  <app-button [value]="loginNumData.buttonText" [visible]="loginNumData.isChecked"></app-button>
+  <app-button [value]="loginNumData.buttonText" [visible]="loginNumData.isChecked" [data]="Email"></app-button>
 </form>

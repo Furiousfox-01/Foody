@@ -1,0 +1,15 @@
+<div class="card-container">
+  <img src="{{ cardItem.image }}" alt="" width="220px" height="fit-content" />
+
+  <div class="total">
+    <div class="descrip">
+      <h3>{{ title }}</h3>
+      <p>Price Per Item {{ price | currency : "INR" : "symbol" : "1.2-2" }}</p>
+      <div>{{ count }}</div>
+    </div>
+    <div class="cross">
+      <p>{{ count * price | currency : "INR" : "symbol" : "1.2-2" }}</p>
+      <!-- <img src="../../assets/cross.png" alt="" width="20px" height="20px" /> -->
+    </div>
+  </div>
+</div>

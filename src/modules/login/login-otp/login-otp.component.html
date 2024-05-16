@@ -1,10 +1,11 @@
 <form action="" [ngClass]="{ formNone: !isShow }">
   <label for="login">ENTER OTP</label>
-  <input type="number" name="phone-no" id="phone-no" />
+  <input type="number" name="phone-no" id="phone-no" [(ngModel)]="otp"/>
 
   <label class="Terms-head" >Resend OTP<span>{{ countdown$ | async }}</span>
     </label >
   <label class="Terms-text">{{ loginOtpData.termsText }}</label>
 
-  <app-button [value]="loginOtpData.buttonText" [visible]="loginOtpData.visible"></app-button>
+  <app-button [value]="loginOtpData.buttonText" [visible]="loginOtpData.visible" [otp]="otp" [data]="email">
+  </app-button>
 </form>

@@ -5,13 +5,14 @@
   </div> -->
   <div class="categoryItems">
     <app-button
-      *ngFor="let data of category"
-      [value]="data"
+      *ngFor="let data of categoryData; let i = index"
+      [value]="data.name"
       [visible]="true"
-      [btnType]="btnType"
+      [btnType]="data.id === selectedId ? 'primary' : 'secondary'"
+      (click)="navigate(data.id)"
     ></app-button>
   </div>
-  <dish-list></dish-list>
-  <dish-list></dish-list>
-  <dish-list></dish-list>
+  <dish-list [Type]="'In Offer!!'"></dish-list>
+  <dish-list [Type]="'Today\'s Special'"></dish-list>
+  <dish-list [Type]="'All dishes'"></dish-list>
 </div>

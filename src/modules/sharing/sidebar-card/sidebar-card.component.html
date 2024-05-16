@@ -1,23 +1,24 @@
 <div class="card">
   <div class="data">
-    <img src="../../assets/banana-leaf rice.png" alt="" width="110px" />
+    <img src="{{ cartData.image }}" alt="" width="110px" />
     <div>
-      <h3>{{ titl }}</h3>
-      <p>price per item ${{ cost }}</p>
+      <h6>{{ title }}</h6>
+      <p>{{ cost | currency : "INR" }}</p>
     </div>
     <img
       width="18"
       height="17"
       src="https://img.icons8.com/ios/50/cancel.png"
       alt="cancel"
+      (click)="deleteItem()"
     />
   </div>
-<div class="total">
-  <div class="items">
-    <button class="btn btn-sm btn-light">--</button>
-    <p style="font-size: .9rem;">{{ quantity }}</p>
-    <button class="btn btn-sm btn-light">+</button>
+  <div class="total">
+    <div class="items">
+      <button class="btn btn-sm btn-light" (click)="minusCount()">--</button>
+      <p style="font-size: 0.9rem">{{ quantity }}</p>
+      <button class="btn btn-sm btn-light" (click)="plusCount()">+</button>
+    </div>
+    {{ totalCost | currency : "INR" : "symbol" : "1.2-2" }}
   </div>
-  ${{totalCost}}
-</div>
 </div>

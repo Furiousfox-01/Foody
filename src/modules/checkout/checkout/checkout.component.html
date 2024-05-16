@@ -1,1 +1,29 @@
-<p>checkout works!</p>
+<div class="header" (click)="navigateToDishes()">
+  <img src="../../assets/arrow.png" alt="" width="25px" />
+  <p>CHECKOUT</p>
+</div>
+<div class="slider">
+  <div class="slider-container">
+    <div *ngFor="let item of cartData">
+      <app-checkout-list [cardItem]="item"></app-checkout-list>
+    </div>
+  </div>
+</div>
+
+<div class="chk-footer">
+  <div class="price">
+    <p>Total</p>
+    <p class="tot">${{ 11 * 450 }}</p>
+  </div>
+
+  <button
+    style="width: 200px; height: 37px; margin-right: 1rem"
+    type="button"
+    class="btn btn-dark"
+    (click)="proceedToPay()"
+  >
+    Proceed To Payment
+  </button>
+</div>
+
+<app-popup *ngIf="isPopupOpen" (submitForm)="onPopupSubmit($event)"></app-popup>

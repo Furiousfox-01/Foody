@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'food-app';
 
   constructor(private router: Router) {
-    this.router.events.subscribe(event => {
-      console.log(event);
-    });
+    // this.router.events.subscribe(event => {
+    //   console.log(event);
+    // });
   }
 }

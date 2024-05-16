@@ -1,10 +1,7 @@
-<div class="parentList">
-  <h2>Today's Special</h2>
+<div class="parentList" *ngIf="foods != []">
+  <h2>{{ Type }}</h2>
 
   <div class="slider">
-    <app-food-card
-      *ngFor="let food of this.temps | async"
-      [food]="food"
-    ></app-food-card>
+    <app-food-card *ngFor="let food of foods" [food]="food"></app-food-card>
   </div>
 </div>

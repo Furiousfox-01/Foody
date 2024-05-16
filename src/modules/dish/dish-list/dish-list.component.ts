@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FoodDataService } from '../services/food-data.service';
 import { Food } from '../services/food-interface';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'dish-list',
   templateUrl: './dish-list.component.html',
@@ -11,16 +12,29 @@ import { HttpClient } from '@angular/common/http';
 export class DishListComponent {
   foods: Food[] = [];
   temps: Observable<any[]> | undefined;
-  constructor(private foodDataService: FoodDataService, private httpClient: HttpClient) {}
-  ngOnInit() {
-    this.getData().subscribe((data: Food[]) => {
-      this.foods = data;
+  categoty: any;
+  @Input() Type: string = '';
+  constructor(
+    private foodDataService: FoodDataService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params) => {
+      const categoryId = parseInt(params.get('id') || '1');
+      this.foodDataService.getFoodData(categoryId).subscribe((data) => {
+        this.foods = data;
+        // console.log(this.foods);
+        this.updateFoods();
+      });
     });
-    this.temps = this.getData();
+  }
+  updateFoods() {
+    if (this.Type === "Today's Special")
+      this.foods = this.foods.filter((food) => {
+        return food.todaySpecial == true;
+      });
   }
 
-  getData(): Observable<Food[]> {
-    return this.foodDataService.getFoodData();
-  }
   ngOnDestroy() {}
 }

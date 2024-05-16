@@ -1,3 +1,8 @@
-<button class="btn" [ngClass]="{'btn-primary':visible,'btn-secondary':variant}" [disabled]="!visible" (click)="handleButton()" >
-    {{value}}
+<button
+  class="btn"
+  [ngClass]="{ 'btn-primary': visible, 'btn-secondary': variant }"
+  [disabled]="!visible"
+  (click)="handleButton()"
+>
+  {{ value }}
 </button>

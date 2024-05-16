@@ -7,11 +7,11 @@
 
   <div class="right" [ngClass]="{ rotate: currentCard != 0 }">
     <ng-container *ngIf="currentCard == 0" else secondCard>
-      <app-login-num></app-login-num>
+      <app-login-num ></app-login-num>
     </ng-container>
 
     <ng-container #secondCard>
-      <app-login-otp [isDisplay]="currentCard != 0"></app-login-otp>
+      <app-login-otp [isDisplay]="currentCard != 0" ></app-login-otp>
     </ng-container>
   </div>
 </div>

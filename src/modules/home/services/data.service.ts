@@ -7,6 +7,6 @@ import { Observable } from 'rxjs';
 export class DataService {
   constructor(private http: HttpClient) { }
   getData():Observable<any> {
-    return this.http.get('./assets/category.json');
+    return this.http.get('https://192.168.1.149:7117/api/categories');
   }
 }

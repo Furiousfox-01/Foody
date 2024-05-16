@@ -1,6 +1,6 @@
 .btn {
   width: 100%;
-  min-width: 300px;
+  min-width: 150px;
   padding: 1rem 0;
   padding-left: 1rem;
   margin: 0 auto;
@@ -28,9 +28,13 @@
   padding-right: 1rem;
 }
 
-.btn-secondary:hover, .active {
+.btn-secondary:hover, .dark  {
   background-color: black;
   color: white;
   cursor: pointer;
 }
 
+.btn-color {
+  background-color: black;
+  color: white;
+}

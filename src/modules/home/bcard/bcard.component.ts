@@ -8,7 +8,7 @@ import { dataC } from '../home-template';
   styleUrls: ['./bcard.component.scss'],
 })
 export class BcardComponent {
-  @Input() categoryData: dataC | undefined;
+  @Input() categoryData: dataC = {} as dataC;
   buttonText: string = 'Order Now';
   title: string = '';
   para: string = '';
@@ -16,15 +16,15 @@ export class BcardComponent {
 
   constructor(private router: Router) {}
 
-  ngOnChanges() {
+  ngOnInit() {
     if (this.categoryData) {
       this.title = this.categoryData.name;
       this.para = this.categoryData.description;
-      this.imgSrc = this.categoryData.imageUrl;
+      this.imgSrc = this.categoryData.image;
     }
   }
 
   naviToDish() {
-    this.router.navigateByUrl('/dish');
+    this.router.navigateByUrl(`/dish/${this.categoryData.id}`);
   }
 }

@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: 'dish',
     loadChildren: () =>
-      import('../modules/dish/dish.module').then((m) => m.TestModule),
+      import('../modules/dish/dish.module').then((m) => m.DishModule),
   },
   {
     path: '',

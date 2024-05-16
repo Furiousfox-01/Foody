@@ -4,7 +4,7 @@ import { DishComponent } from './dish/dish.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: DishComponent,
   },
 ];
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TestRoutingModule {}
+export class DishRoutingModule {}

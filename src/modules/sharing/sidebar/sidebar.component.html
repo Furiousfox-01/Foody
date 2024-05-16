@@ -1,4 +1,4 @@
-<div class="titl">
+<div class="title">
   <p>Order Bag</p>
   <img
     width="25"
@@ -9,10 +9,19 @@
   />
 </div>
 <div class="slider">
-  <app-sidebar-card> </app-sidebar-card>
-  <app-sidebar-card> </app-sidebar-card>
-  <app-sidebar-card> </app-sidebar-card>
-  <app-sidebar-card> </app-sidebar-card>
-  <app-sidebar-card> </app-sidebar-card>
-  <app-sidebar-card> </app-sidebar-card>
+  <div *ngFor="let item of cartItems">
+    <app-sidebar-card [cartData]="item"></app-sidebar-card>
+  </div>
+  <button
+    style="width: 200px; height: 37px; margin-right: 1rem"
+    type="button"
+    class="btn btn-dark"
+    (click)="navToCheckout()"
+    *ngIf="cartItems != []"
+  >
+    Proceed To Payment
+  </button>
+  <div *ngIf="cartItems == []" class="no-food-available">
+    No special item available
+  </div>
 </div>

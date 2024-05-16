@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ButtonComponent } from './button/button.component';
-
 const modules = [CommonModule, FormsModule, HttpClientModule];
 const components = [ButtonComponent];
 
@@ -11,5 +10,6 @@ const components = [ButtonComponent];
   declarations: [...components],
   imports: [...modules],
   exports: [...components, ...modules],
+  providers: [],
 })
 export class SharedModule {}

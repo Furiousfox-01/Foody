@@ -1,7 +1,7 @@
 export interface dataC {
-  _id: number;
-  imageUrl: string;
-  items: number;
+  id: number;
+  image: string;
+  totalItems: number;
   name: string;
   description: string;
 }

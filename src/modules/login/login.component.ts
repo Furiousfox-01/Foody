@@ -17,8 +17,12 @@ export class LoginComponent implements OnDestroy {
   visible: boolean = false;
   currentCard: number = 0;
   rotation: Subscription = new Subscription();
+  email: string = '';
 
-  constructor(private rotationService: RotationService, private router: Router) {
+  constructor(
+    private rotationService: RotationService,
+    private router: Router
+  ) {
     this.setupRotationSubscription();
   }
 
@@ -26,7 +30,7 @@ export class LoginComponent implements OnDestroy {
     this.rotation.unsubscribe();
   }
 
-  private setupRotationSubscription():void {
+  private setupRotationSubscription(): void {
     if (this.currentCard == 0) {
       this.rotation = this.rotationService.rotate$.subscribe(() => {
         this.rotateToNext();
@@ -34,9 +38,9 @@ export class LoginComponent implements OnDestroy {
     }
   }
 
-  rotateToNext():void {
+  rotateToNext(): void {
     if (this.currentCard != 0) {
-      this.router.navigate(['home']);
+      // this.router.navigate(['home']);
     }
     this.currentCard = (this.currentCard + 1) % 2;
   }

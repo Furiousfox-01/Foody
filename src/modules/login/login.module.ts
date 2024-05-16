@@ -6,14 +6,10 @@ import { LoginComponent } from './login.component';
 import { SharedModule } from '../../shared/shared.module';
 import { LoginRoutingModule } from './login-routing.module';
 
-const loginComponents = [LoginOtpComponent,LoginNumComponent,LoginComponent];
+const loginComponents = [LoginOtpComponent, LoginNumComponent, LoginComponent];
 @NgModule({
   declarations: [...loginComponents],
-  imports: [
-    SharedModule,
-    LoginRoutingModule
-  ],
+  imports: [SharedModule, LoginRoutingModule],
   bootstrap: [LoginComponent],
 })
-export class LoginModule { }
-
+export class LoginModule {}
